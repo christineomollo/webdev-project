@@ -1,27 +1,27 @@
 /* BurBestie — shared CSS */
 :root{
-  --bg:#fff;
-  --card:#fffafc;
-  --text:#1a1a1a;
+  --bg:#6c9595;
+  --card:#b9d5ca;
+  --text:#0a4444;
   --muted:#6b6b6b;
   --accent:#ff6fb5;   /* pink */
-  --accent-2:#c084fc; /* lavender */
-  --sos:#ef64ac;
+  --accent-2:#aa2596; /* lavender */
+  --sos:#126060;
   --glass: rgba(255,255,255,0.6);
   --maxw:1100px;
   --radius:14px;
   --gap:1rem;
-  --shadow: 0 6px 20px rgba(20,20,30,0.06);
+  --shadow: 0 6px 20px rgba(191, 43, 176, 0.06);
   --pop-scale:0.98;
   --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 /* Dark mode variables */
 :root.dark{
-  --bg: #0f0b1a;
-  --card: rgba(20,10,30,0.6);
-  --text: #940c62;
-  --muted: #e85eb3;
+  --bg: #1b082e;
+  --card: rgba(197, 185, 210, 0.6);
+  --text: #5c2791;
+  --muted: #654782;
   --glass: rgba(236, 99, 215, 0.04);
 }
 
@@ -31,7 +31,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:var(--font);
-  background:linear-gradient(180deg,var(--bg), #e98585);
+  background:linear-gradient(180deg,var(--bg), #937a7a);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -85,7 +85,7 @@ body{
 .chat-form button{white-space:nowrap}
 
 /* SOS */
-.sos-panel{background:linear-gradient(90deg, rgba(255,245,247,1), rgba(250,250,255,1));padding:1rem;border-radius:12px;box-shadow:var(--shadow);max-width:780px}
+.sos-panel{background:linear-gradient(90deg, rgb(206, 188, 192), rgba(250,250,255,1));padding:1rem;border-radius:12px;box-shadow:var(--shadow);max-width:780px}
 .sos-big{font-size:1.05rem;padding:1rem 1.2rem;border-radius:18px;background:linear-gradient(90deg,var(--sos),#ff7b7b);color:#fff;border:0}
 .sos-actions{display:flex;gap:.5rem;margin-top:.75rem}
 .small{padding:.35rem .6rem;font-size:.9rem}
