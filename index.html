@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BurBestie — Be Your Bestie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="BurBestie — A safe space where Besties connect, support, and uplift each other." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">BurBestie</a>
+
+      <div class="header-actions">
+        <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <a class="sos-mini" href="sos.html" title="SOS for Besties in danger">🚨 SOS</a>
+        <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="connect.html">Connect with Besties</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sos.html" class="nav-sos">SOS</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Welcome, Bestie 💖</h1>
+          <p class="lead">BurBestie — <strong>Be Your Bestie</strong>. Connect, encourage, and support one another. You’re never alone.</p>
+          <p class="cta-row">
+            <a class="btn primary pop" href="connect.html">🌸 Connect with Besties</a>
+            <a class="btn ghost pop" href="sos.html">🚨 SOS Help</a>
+          </p>
+          <div class="quote-box" aria-live="polite">
+            <strong>Encouragement:</strong> <span id="quote">You are stronger than you think.</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-top">
+            <img src="https://via.placeholder.com/420x260?text=BurBestie" alt="BurBestie community" />
+          </div>
+          <div class="card-body">
+            <p><strong>24/7 support</strong> • Trusted resources • Private, caring Besties</p>
+            <a class="btn outline pop" href="about.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="feature">
+        <h3>Safe Space</h3>
+        <p>Privacy and empathy are at the heart of BurBestie.</p>
+      </article>
+      <article class="feature">
+        <h3>Encouragement</h3>
+        <p>Share stories, send love, and uplift fellow Besties.</p>
+      </article>
+      <article class="feature">
+        <h3>SOS</h3>
+        <p>Quick help resources and a panic button for immediate support.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>BurBestie</h4>
+        <p>Be Your Bestie — a caring circle for women. 💕</p>
+      </div>
+      <nav>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="connect.html">Connect</a></li>
+          <li><a href="sos.html">SOS</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h5>Quick Help</h5>
+        <ul>
+          <li><a href="sos.html">Emergency SOS</a></li>
+          <li><a href="contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <small>&copy; <span id="year"></span> BurBestie • All Besties welcome</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

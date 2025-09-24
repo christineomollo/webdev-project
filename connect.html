@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connect with Besties — BurBestie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">BurBestie</a>
+      <div class="header-actions">
+        <button id="darkToggleConnect" class="icon-btn" aria-pressed="false">🌙</button>
+        <a class="sos-mini" href="sos.html">🚨 SOS</a>
+        <button id="navToggleConnect" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="connect.html" class="active">Connect with Besties</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sos.html" class="nav-sos">SOS</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 0;">
+    <h1>Connect with Besties</h1>
+    <p class="lead">This area is where Besties can chat and encourage one another. For now, use the mock chat below to try the UI.</p>
+
+    <section class="chat-card">
+      <div class="chat-window" id="chatWindow" aria-live="polite">
+        <div class="msg other"><strong>Bestie A:</strong> Hey Bestie! How are you today?</div>
+        <div class="msg me"><strong>You:</strong> I'm okay — thank you for checking in 💕</div>
+      </div>
+
+      <form id="chatForm" class="chat-form" aria-label="Send a message">
+        <input id="chatName" placeholder="Your nick (Bestie name)" value="You" required />
+        <input id="chatInput" placeholder="Write encouragement..." required />
+        <button class="btn primary pop" type="submit">Send</button>
+      </form>
+
+      <p class="muted">Note: This is a mock chat UI. For a live chat, integrate real-time back end or WebSocket later.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>BurBestie</h4>
+        <p>Be Your Bestie — a caring circle for women. 💕</p>
+      </div>
+      <div class="copyright">
+        <small>&copy; <span id="yearConnect"></span> BurBestie</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

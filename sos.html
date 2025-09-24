@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOS for Besties — BurBestie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">BurBestie</a>
+      <div class="header-actions">
+        <button id="darkToggleSOS" class="icon-btn" aria-pressed="false">🌙</button>
+        <a class="sos-mini active" href="sos.html">🚨 SOS</a>
+        <button id="navToggleSOS" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="connect.html">Connect with Besties</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sos.html" class="nav-sos active">SOS</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 0;">
+    <h1>Help a Bestie Now</h1>
+    <p class="lead">If you or a Bestie is in immediate danger, use the big SOS button below or call your local emergency number right away.</p>
+
+    <section class="sos-panel">
+      <button id="bigSos" class="btn sos-pop sos-big" aria-pressed="false">🚨 HELP A BESTIE NOW</button>
+      <div class="sos-actions">
+        <button id="quickExit" class="btn outline small">Quick Exit</button>
+        <a class="btn ghost small" href="tel:112">Call Emergency</a>
+      </div>
+
+      <div class="sos-resources">
+        <h3>Hotlines & Resources</h3>
+        <ul>
+          <li><strong>Local Emergency:</strong> Call 112 (or your local emergency number)</li>
+          <li><strong>Women's Helpline:</strong> 0800-123-456</li>
+          <li><strong>National Shelter:</strong> shelter@example.org</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h3>Anonymous Report (for yourself or a Bestie)</h3>
+      <form id="reportForm" class="report-form" novalidate>
+        <label>
+          Location (optional)
+          <input name="location" placeholder="City or area (optional)" />
+        </label>
+        <label>
+          Type of concern
+          <select name="type" required>
+            <option value="">Choose...</option>
+            <option>Physical Abuse</option>
+            <option>Emotional Abuse</option>
+            <option>Stalking</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Details (brief)
+          <textarea name="details" rows="4" placeholder="Describe the situation..."></textarea>
+        </label>
+        <div class="report-row">
+          <button class="btn primary pop" type="submit">Submit Report</button>
+          <button class="btn outline" type="reset">Clear</button>
+        </div>
+        <p id="reportMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <p class="muted">If this is not an emergency but you need help, consider <a href="connect.html">connecting with Besties</a> for support.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>BurBestie</h4>
+        <p>Here for every Bestie.</p>
+      </div>
+      <div class="copyright">
+        <small>&copy; <span id="yearSOS"></span> BurBestie</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

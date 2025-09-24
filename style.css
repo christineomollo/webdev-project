@@ -1,0 +1,131 @@
+/* BurBestie — shared CSS */
+:root{
+  --bg:#fff;
+  --card:#fffafc;
+  --text:#1a1a1a;
+  --muted:#6b6b6b;
+  --accent:#ff6fb5;   /* pink */
+  --accent-2:#c084fc; /* lavender */
+  --sos:#ef64ac;
+  --glass: rgba(255,255,255,0.6);
+  --maxw:1100px;
+  --radius:14px;
+  --gap:1rem;
+  --shadow: 0 6px 20px rgba(20,20,30,0.06);
+  --pop-scale:0.98;
+  --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Dark mode variables */
+:root.dark{
+  --bg: #0f0b1a;
+  --card: rgba(20,10,30,0.6);
+  --text: #940c62;
+  --muted: #e85eb3;
+  --glass: rgba(236, 99, 215, 0.04);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:linear-gradient(180deg,var(--bg), #e98585);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition:background .25s, color .25s;
+  padding-bottom:4rem;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--card);backdrop-filter: blur(6px);box-shadow:var(--shadow);border-bottom:1px solid rgba(0,0,0,0.03)}
+.header-row{display:flex;align-items:center;gap:1rem;padding:.9rem 0;justify-content:space-between}
+.logo{font-weight:700;color:var(--accent-2);text-decoration:none;font-size:1.25rem}
+.header-actions{display:flex;align-items:center;gap:.5rem}
+.icon-btn{background:transparent;border:0;padding:.4rem .6rem;border-radius:10px;font-size:1rem;cursor:pointer}
+.icon-btn:focus{outline:3px solid rgba(200,200,255,0.2)}
+.sos-mini{background:var(--sos);color:#fff;padding:.4rem .6rem;border-radius:10px;text-decoration:none}
+
+.nav-toggle{display:none;background:none;border:0;font-size:1.2rem;padding:.25rem .6rem;cursor:pointer}
+
+/* Navigation */
+.main-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.main-nav a{text-decoration:none;color:var(--text);padding:.5rem .6rem;border-radius:10px}
+.main-nav a:hover, .main-nav a:focus{background:var(--glass)}
+
+/* Hero */
+.hero{padding:3rem 0;background:linear-gradient(180deg, #fff7fb, #fff)}
+.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:1.5rem;align-items:center}
+.hero-text h1{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:0 0 .5rem}
+.lead{color:var(--muted);margin-top:.25rem}
+.cta-row{margin-top:1rem;display:flex;gap:.75rem}
+.quote-box{margin-top:1rem;background:linear-gradient(90deg, rgba(255,111,181,0.06), rgba(192,132,252,0.04));padding:.6rem;border-radius:10px;color:var(--muted)}
+
+/* Card */
+.hero-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.hero-card img{width:100%;display:block}
+.card-body{padding:1rem}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:2rem 0}
+.feature{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+.feature h3{margin-top:0}
+
+/* Chat/Card/UI */
+.chat-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow);max-width:800px;margin-top:1rem}
+.chat-window{height:260px;overflow:auto;padding:.75rem;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));display:flex;flex-direction:column;gap:.5rem}
+.msg{padding:.5rem 0}
+.msg.me{align-self:flex-end;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.4rem .6rem;border-radius:8px}
+.msg.other{background:transparent;color:var(--text);padding:.4rem .6rem;border-radius:8px}
+.chat-form{display:flex;gap:.5rem;margin-top:.75rem}
+.chat-form input{flex:1;padding:.5rem;border-radius:8px;border:1px solid rgba(0,0,0,.06)}
+.chat-form button{white-space:nowrap}
+
+/* SOS */
+.sos-panel{background:linear-gradient(90deg, rgba(255,245,247,1), rgba(250,250,255,1));padding:1rem;border-radius:12px;box-shadow:var(--shadow);max-width:780px}
+.sos-big{font-size:1.05rem;padding:1rem 1.2rem;border-radius:18px;background:linear-gradient(90deg,var(--sos),#ff7b7b);color:#fff;border:0}
+.sos-actions{display:flex;gap:.5rem;margin-top:.75rem}
+.small{padding:.35rem .6rem;font-size:.9rem}
+.sos-resources ul{margin:0;padding-left:1.1rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:999px;border:0;cursor:pointer;text-decoration:none;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--text)}
+.btn.outline{background:transparent;border:1px solid rgba(0,0,0,0.08);color:var(--text)}
+.btn.pop{transition:transform .12s ease, box-shadow .12s ease}
+.btn.pop:active{transform:scale(var(--pop-scale));box-shadow:none}
+
+/* Form */
+label{display:block;margin-top:.8rem}
+input, select, textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:.25rem}
+.report-row{display:flex;gap:.6rem;margin-top:.8rem;align-items:center}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* Footer */
+.site-footer{margin-top:2rem;padding:1.25rem 0;background:transparent}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1rem;align-items:start}
+.footer-grid h4, .footer-grid h5{margin:0 0 .5rem}
+footer a{text-decoration:none;color:var(--muted)}
+
+/* Utility */
+.active{font-weight:700;color:var(--accent-2)}
+.container.center{display:flex;align-items:center;justify-content:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:1rem}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .main-nav{position:fixed;right:0;top:0;height:100%;width:280px;background:var(--card);transform:translateX(110%);transition:transform .22s;box-shadow:-8px 0 30px rgba(10,10,20,0.12);padding:2rem 1rem}
+  .main-nav.open{transform:translateX(0)}
+  .nav-toggle{display:inline-block}
+  .main-nav ul{flex-direction:column;gap:.6rem}
+  .header-actions{gap:.25rem}
+  .footer-grid{grid-template-columns:1fr}
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — BurBestie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">BurBestie</a>
+      <div class="header-actions">
+        <button id="darkToggleContact" class="icon-btn" aria-pressed="false">🌙</button>
+        <a class="sos-mini" href="sos.html">🚨 SOS</a>
+        <button id="navToggleContact" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="connect.html">Connect with Besties</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sos.html" class="nav-sos">SOS</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 0;">
+    <h1>Contact BurBestie</h1>
+    <p class="lead">Reach out — whether you're asking about partnering, volunteering, or getting help.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>
+        Your Bestie Name
+        <input id="cf-name" name="name" placeholder="How should we call you?" required />
+      </label>
+
+      <label>
+        Email
+        <input id="cf-email" name="email" type="email" placeholder="bestie@example.com" required />
+      </label>
+
+      <label>
+        Topic
+        <select id="cf-topic" name="topic">
+          <option>General Inquiry</option>
+          <option>Volunteer</option>
+          <option>Partnership</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea id="cf-message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </label>
+
+      <div class="report-row">
+        <button class="btn primary pop" type="submit">Send Message</button>
+        <button class="btn outline" type="reset">Clear</button>
+      </div>
+      <p id="contactMsg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>BurBestie</h4>
+        <p>Be Your Bestie — a caring circle for women. 💕</p>
+      </div>
+      <div class="copyright">
+        <small>&copy; <span id="yearContact"></span> BurBestie</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
